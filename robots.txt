@@ -1,0 +1,13 @@
+# robots.txt · https://seguridadgrupoleon.com/
+# Grupo León · GPL Seguridad (seguridad privada en Aguascalientes)
+
+# Todos los rastreadores (Google, Bing, DuckDuckGo y asistentes de IA) pueden leer todo el sitio,
+# incluidos CSS, JS e imágenes, que Google necesita para renderizar la página.
+User-agent: *
+Allow: /
+
+# Carpetas de trabajo / archivos fuente del cliente: no forman parte del sitio público.
+Disallow: /img/
+Disallow: /nuevas/
+
+Sitemap: https://seguridadgrupoleon.com/sitemap.xml

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://seguridadgrupoleon.com/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://seguridadgrupoleon.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seguridadgrupoleon.com/"/>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/logo-gpl.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/guardias-retrato.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/guardias-calle.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/guardias-patrulla.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/patrullas.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/escolta-fondo.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/reunion-direccion.webp</image:loc></image:image>
+    <image:image><image:loc>https://seguridadgrupoleon.com/assets/img/reunion-seguridad.webp</image:loc></image:image>
+  </url>
+</urlset>

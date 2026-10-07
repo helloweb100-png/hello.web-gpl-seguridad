@@ -1,0 +1,102 @@
+# =====================================================================
+#  .htaccess · seguridadgrupoleon.com
+#  Solo aplica en hosting Apache (cPanel, Hostinger, GoDaddy, etc.).
+#  En Netlify / Vercel / Cloudflare Pages este archivo se ignora.
+#  Cada bloque va dentro de <IfModule> para que un módulo ausente
+#  nunca provoque un error 500.
+# =====================================================================
+
+AddDefaultCharset UTF-8
+
+# ---------------------------------------------------------------------
+#  1 · URL única y canónica: https://seguridadgrupoleon.com/
+#      (evita contenido duplicado entre http/https, www/sin www e /index.html)
+# ---------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # http -> https (respeta proxys/CDN que ya terminan el SSL, evita bucles)
+  RewriteCond %{HTTP_HOST} ^(www\.)?seguridadgrupoleon\.com$ [NC]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://seguridadgrupoleon.com%{REQUEST_URI} [L,R=301]
+
+  # www -> sin www
+  RewriteCond %{HTTP_HOST} ^www\.seguridadgrupoleon\.com$ [NC]
+  RewriteRule ^ https://seguridadgrupoleon.com%{REQUEST_URI} [L,R=301]
+
+  # /index.html -> /
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ https://seguridadgrupoleon.com/ [L,R=301]
+
+  # Carpetas de trabajo (archivos fuente del cliente): nunca públicas
+  RewriteRule ^(img|nuevas)(/|$) - [F,L]
+</IfModule>
+
+# ---------------------------------------------------------------------
+#  2 · Tipos MIME correctos
+# ---------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType video/mp4 .mp4
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+  AddType text/plain .txt
+</IfModule>
+
+# ---------------------------------------------------------------------
+#  3 · Compresión (HTML, CSS, JS, JSON-LD, XML)
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json application/ld+json
+  AddOutputFilterByType DEFLATE application/manifest+json image/svg+xml image/x-icon image/vnd.microsoft.icon
+</IfModule>
+
+# ---------------------------------------------------------------------
+#  4 · Caché del navegador (Core Web Vitals y visitas recurrentes)
+#      HTML siempre se revalida; CSS/JS 1 semana; imágenes y video 1 mes.
+# ---------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 day"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType text/plain "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+# ---------------------------------------------------------------------
+#  5 · Cabeceras de seguridad y confianza
+#      (sin Content-Security-Policy a propósito: el sitio usa Google Fonts,
+#       Google Maps, jsDelivr y WhatsApp, y una CSP mal calibrada rompería la página)
+# ---------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  # HSTS solo cuando la petición llegó por HTTPS
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+</IfModule>
+
+# ---------------------------------------------------------------------
+#  6 · Archivos ocultos y de configuración nunca públicos
+# ---------------------------------------------------------------------
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.(?!well-known)">
+    Require all denied
+  </FilesMatch>
+</IfModule>

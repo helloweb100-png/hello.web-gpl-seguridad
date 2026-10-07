@@ -6,13 +6,22 @@
 
   <!-- ============ SEO BÁSICO ============ -->
   <title>Seguridad Privada en Aguascalientes | Grupo León GPL</title>
-  <meta name="description" content="Grupo León: seguridad privada en Aguascalientes. Vigilancia empresarial, escoltas y protección patrimonial con supervisión 24/7, pólizas y registro SSP. Cotiza hoy.">
+  <meta name="description" content="Grupo León: seguridad privada en Aguascalientes. Vigilancia empresarial, escoltas y protección patrimonial con supervisión 24/7 y registro SSP. Cotiza hoy.">
   <meta name="keywords" content="seguridad privada Aguascalientes, vigilancia empresarial, escoltas Aguascalientes, protección patrimonial, guardias de seguridad, GPL Seguridad, Grupo León">
   <meta name="author" content="Grupo León S.A. de C.V.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#1b1b1e">
   <meta name="color-scheme" content="light">
-  <link rel="canonical" href="https://www.grupoleonags.com/">
+  <meta name="application-name" content="Grupo León">
+  <meta name="apple-mobile-web-app-title" content="Grupo León">
+  <link rel="canonical" href="https://seguridadgrupoleon.com/">
+  <link rel="alternate" hreflang="es-MX" href="https://seguridadgrupoleon.com/">
+  <link rel="alternate" hreflang="x-default" href="https://seguridadgrupoleon.com/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
+  <!-- ============ SEO LOCAL ============ -->
+  <meta name="geo.region" content="MX-AGU">
+  <meta name="geo.placename" content="Aguascalientes">
 
   <!-- ============ OPEN GRAPH / TWITTER ============ -->
   <meta property="og:type" content="website">
@@ -20,26 +29,63 @@
   <meta property="og:site_name" content="Grupo León · GPL Seguridad">
   <meta property="og:title" content="Grupo León | Seguridad Privada en Aguascalientes">
   <meta property="og:description" content="Vigilancia empresarial, escoltas y protección patrimonial con supervisión 24/7, pólizas de respaldo y registro SSP.">
-  <meta property="og:url" content="https://www.grupoleonags.com/">
-  <meta property="og:image" content="https://www.grupoleonags.com/assets/img/og-grupo-leon.jpg">
+  <meta property="og:url" content="https://seguridadgrupoleon.com/">
+  <meta property="og:image" content="https://seguridadgrupoleon.com/assets/img/og-grupo-leon.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:alt" content="Logotipo de GPL Seguridad, Grupo León, seguridad privada en Aguascalientes">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Grupo León | Seguridad Privada en Aguascalientes">
   <meta name="twitter:description" content="Vigilancia empresarial, escoltas y protección patrimonial con supervisión 24/7.">
-  <meta name="twitter:image" content="https://www.grupoleonags.com/assets/img/og-grupo-leon.jpg">
+  <meta name="twitter:image" content="https://seguridadgrupoleon.com/assets/img/og-grupo-leon.jpg">
+  <meta name="twitter:image:alt" content="Logotipo de GPL Seguridad, Grupo León, seguridad privada en Aguascalientes">
 
-  <!-- ============ ICONOS ============ -->
+  <!-- ============ ICONOS (Google pide favicon múltiplo de 48 px) ============ -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <!-- ============ FUENTES (Montserrat = tipografía del brand deck) ============ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ============ FUENTES (Montserrat = tipografía del brand deck) · alojadas en el propio sitio ============ -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preload" as="image" href="assets/img/logo-gpl-sm.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/img/logo-gpl.webp" type="image/webp">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-normal-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-italic-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-normal-latin.woff2" crossorigin>
+  <style>
+    /* Fuentes alojadas en el sitio (mismos archivos y pesos que Google Fonts): sin hoja externa que bloquee el render */
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/inter-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/inter-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/inter-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/inter-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url(assets/fonts/inter-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url(assets/fonts/inter-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/jetbrains-mono-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/jetbrains-mono-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/jetbrains-mono-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/jetbrains-mono-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 700; font-display: swap; src: url(assets/fonts/montserrat-italic-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 700; font-display: swap; src: url(assets/fonts/montserrat-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 800; font-display: swap; src: url(assets/fonts/montserrat-italic-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 800; font-display: swap; src: url(assets/fonts/montserrat-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 900; font-display: swap; src: url(assets/fonts/montserrat-italic-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 900; font-display: swap; src: url(assets/fonts/montserrat-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/montserrat-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/montserrat-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url(assets/fonts/montserrat-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url(assets/fonts/montserrat-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/montserrat-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/montserrat-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 800; font-display: swap; src: url(assets/fonts/montserrat-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 800; font-display: swap; src: url(assets/fonts/montserrat-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 900; font-display: swap; src: url(assets/fonts/montserrat-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 900; font-display: swap; src: url(assets/fonts/montserrat-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  </style>
   <link rel="stylesheet" href="styles.css">
 
   <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -50,14 +96,30 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://www.grupoleonags.com/#empresa",
+        "@type": [
+          "LocalBusiness",
+          "ProfessionalService"
+        ],
+        "@id": "https://seguridadgrupoleon.com/#empresa",
         "name": "Grupo León · Seguridad Privada Ags",
         "legalName": "Grupo León S.A. de C.V.",
-        "alternateName": ["GPL Seguridad", "Seguridad Privada Grupo León"],
-        "url": "https://www.grupoleonags.com/",
-        "logo": "https://www.grupoleonags.com/assets/img/logo-gpl.png",
-        "image": "https://www.grupoleonags.com/assets/img/og-grupo-leon.jpg",
+        "alternateName": [
+          "GPL Seguridad",
+          "Seguridad Privada Grupo León"
+        ],
+        "url": "https://seguridadgrupoleon.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://seguridadgrupoleon.com/assets/img/logo-gpl.png",
+          "width": 900,
+          "height": 900,
+          "caption": "Logotipo de GPL Seguridad"
+        },
+        "image": [
+          "https://seguridadgrupoleon.com/assets/img/logo-gpl.png",
+          "https://seguridadgrupoleon.com/assets/img/patrullas.webp",
+          "https://seguridadgrupoleon.com/assets/img/og-grupo-leon.jpg"
+        ],
         "description": "Empresa de seguridad privada en Aguascalientes: vigilancia a empresas y establecimientos, protección personal (escoltas) y protección empresarial y patrimonial con supervisión 24/7.",
         "telephone": "+52-449-281-2299",
         "email": "seguridadleon2014@gmail.com",
@@ -69,64 +131,224 @@
           "postalCode": "20030",
           "addressCountry": "MX"
         },
-        "areaServed": { "@type": "AdministrativeArea", "name": "Aguascalientes, México" },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Av.+H%C3%A9roe+de+Nacozari+Nte+1102+Gremial+Aguascalientes",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Aguascalientes"
+          },
+          {
+            "@type": "State",
+            "name": "Aguascalientes",
+            "containedInPlace": {
+              "@type": "Country",
+              "name": "México"
+            }
+          }
+        ],
         "contactPoint": [
-          { "@type": "ContactPoint", "telephone": "+52-449-211-3512", "contactType": "customer service", "availableLanguage": "es" },
-          { "@type": "ContactPoint", "telephone": "+52-449-281-2299", "contactType": "sales", "availableLanguage": "es" }
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-449-211-3512",
+            "contactType": "customer service",
+            "availableLanguage": "es",
+            "areaServed": "MX"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-449-281-2299",
+            "contactType": "sales",
+            "availableLanguage": "es",
+            "areaServed": "MX"
+          }
         ],
         "sameAs": [
           "https://www.instagram.com/grupoleonmx",
           "https://www.facebook.com/share/1DjRPrJ9Kc/"
         ],
+        "knowsAbout": [
+          "Seguridad privada",
+          "Vigilancia a empresas y establecimientos",
+          "Protección personal y escoltas",
+          "Protección empresarial y patrimonial",
+          "Control de accesos",
+          "Monitoreo de CCTV y alarmas",
+          "Rondines de seguridad"
+        ],
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "name": "Registro SSP (Secretaría de Seguridad Pública de Aguascalientes)",
+            "value": "SSP-249-SPA/B.E."
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Registro REPSE",
+            "value": "ARR20901/2024"
+          }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Portafolio de servicios de seguridad privada",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vigilancia a empresas y establecimientos" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Protección personal (escoltas) para empresarios, ejecutivos y sector artístico" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Protección empresarial y patrimonial" } }
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@id": "https://seguridadgrupoleon.com/#servicio-vigilancia"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@id": "https://seguridadgrupoleon.com/#servicio-escoltas"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@id": "https://seguridadgrupoleon.com/#servicio-patrimonial"
+              }
+            }
           ]
         }
       },
       {
+        "@type": "Service",
+        "@id": "https://seguridadgrupoleon.com/#servicio-vigilancia",
+        "name": "Vigilancia a empresas y establecimientos",
+        "serviceType": "Seguridad privada",
+        "description": "Sistema integral de control de accesos, salidas y movimientos internos, con guardias intramuros y monitoreo de sistemas de CCTV, bajo protocolos de seguridad en cadena logística (CT-PAT, NEEC, BASC, ISO 28001 e ISO 18788).",
+        "provider": {
+          "@id": "https://seguridadgrupoleon.com/#empresa"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Aguascalientes"
+        },
+        "url": "https://seguridadgrupoleon.com/#servicios"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://seguridadgrupoleon.com/#servicio-escoltas",
+        "name": "Protección personal (escoltas) para empresarios, ejecutivos y sector artístico",
+        "serviceType": "Seguridad privada",
+        "description": "Traslados terrestres seguros para familias, empresarios y ejecutivos, con un esquema integral de seguridad para la protección, custodia y salvaguarda de la vida y la integridad física de los clientes.",
+        "provider": {
+          "@id": "https://seguridadgrupoleon.com/#empresa"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Aguascalientes"
+        },
+        "url": "https://seguridadgrupoleon.com/#servicios"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://seguridadgrupoleon.com/#servicio-patrimonial",
+        "name": "Protección empresarial y patrimonial",
+        "serviceType": "Seguridad privada",
+        "description": "Servicios de protección para la familia y los bienes: control de casetas de acceso, acceso de visitas, proveedores y servicios, verificación de entrada y salida de vehículos, prevención de robos, CCTV, alarmas, atención a emergencias y rondines.",
+        "provider": {
+          "@id": "https://seguridadgrupoleon.com/#empresa"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Aguascalientes"
+        },
+        "url": "https://seguridadgrupoleon.com/#servicios"
+      },
+      {
         "@type": "WebSite",
-        "@id": "https://www.grupoleonags.com/#web",
-        "url": "https://www.grupoleonags.com/",
+        "@id": "https://seguridadgrupoleon.com/#web",
+        "url": "https://seguridadgrupoleon.com/",
         "name": "Grupo León · Seguridad Privada",
-        "inLanguage": "es-MX"
+        "inLanguage": "es-MX",
+        "publisher": {
+          "@id": "https://seguridadgrupoleon.com/#empresa"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://seguridadgrupoleon.com/#webpage",
+        "url": "https://seguridadgrupoleon.com/",
+        "name": "Seguridad Privada en Aguascalientes | Grupo León GPL",
+        "description": "Grupo León: seguridad privada en Aguascalientes. Vigilancia empresarial, escoltas y protección patrimonial con supervisión 24/7 y registro SSP. Cotiza hoy.",
+        "inLanguage": "es-MX",
+        "isPartOf": {
+          "@id": "https://seguridadgrupoleon.com/#web"
+        },
+        "about": {
+          "@id": "https://seguridadgrupoleon.com/#empresa"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://seguridadgrupoleon.com/#primaryimage"
+        }
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://seguridadgrupoleon.com/#primaryimage",
+        "url": "https://seguridadgrupoleon.com/assets/img/og-grupo-leon.jpg",
+        "contentUrl": "https://seguridadgrupoleon.com/assets/img/og-grupo-leon.jpg",
+        "width": 1200,
+        "height": 630,
+        "caption": "Logotipo de GPL Seguridad, Grupo León, seguridad privada en Aguascalientes"
       },
       {
         "@type": "FAQPage",
+        "@id": "https://seguridadgrupoleon.com/#faq",
+        "url": "https://seguridadgrupoleon.com/#faq",
+        "inLanguage": "es-MX",
+        "isPartOf": {
+          "@id": "https://seguridadgrupoleon.com/#webpage"
+        },
         "mainEntity": [
           {
             "@type": "Question",
             "name": "¿Qué servicios de seguridad privada ofrece Grupo León en Aguascalientes?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos vigilancia a empresas y establecimientos, protección personal (escoltas para empresarios, ejecutivos y sector artístico) y protección empresarial y patrimonial: control de accesos, monitoreo de CCTV y alarmas, rondines, prevención de robos y atención a emergencias." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofrecemos vigilancia a empresas y establecimientos, protección personal (escoltas para empresarios, ejecutivos y sector artístico) y protección empresarial y patrimonial: control de accesos, monitoreo de CCTV y alarmas, rondines, prevención de robos y atención a emergencias."
+            }
           },
           {
             "@type": "Question",
             "name": "¿Grupo León cuenta con autorización para operar?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Operamos bajo el registro SSP-249-SPA/B.E. de la Secretaría de Seguridad Pública de Aguascalientes y contamos con el registro REPSE ARR20901/2024. Puedes solicitar los documentos por WhatsApp." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Operamos bajo el registro SSP-249-SPA/B.E. de la Secretaría de Seguridad Pública de Aguascalientes y contamos con el registro REPSE ARR20901/2024. Puedes solicitar los documentos por WhatsApp."
+            }
           },
           {
             "@type": "Question",
             "name": "¿Qué pasa si mi patrimonio sufre un daño durante el servicio?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Contamos con una póliza de responsabilidad civil por $100,000 MN y una fianza de fidelidad por $100,000 MN que cubren el daño patrimonial derivado de la acción u omisión del personal o de un delito cometido por un empleado de seguridad privada." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Contamos con una póliza de responsabilidad civil por $100,000 MN y una fianza de fidelidad por $100,000 MN que cubren el daño patrimonial derivado de la acción u omisión del personal o de un delito cometido por un empleado de seguridad privada."
+            }
           },
           {
             "@type": "Question",
             "name": "¿Cómo seleccionan y capacitan a su personal de seguridad?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Cuidamos cada etapa: un proceso de reclutamiento y selección profesionalizado, capacitación constante y supervisión permanente de los servicios. Nuestro equipo gerencial y de supervisión está formado por exmiembros de corporaciones de seguridad pública municipal y estatal." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cuidamos cada etapa: un proceso de reclutamiento y selección profesionalizado, capacitación constante y supervisión permanente de los servicios. Nuestro equipo gerencial y de supervisión está formado por exmiembros de corporaciones de seguridad pública municipal y estatal."
+            }
           },
           {
             "@type": "Question",
             "name": "¿Ofrecen escoltas para ejecutivos, familias o artistas?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Brindamos protección personal con traslados terrestres seguros para familias, empresarios, ejecutivos y sector artístico, con un esquema integral de protección, custodia y salvaguarda." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Brindamos protección personal con traslados terrestres seguros para familias, empresarios, ejecutivos y sector artístico, con un esquema integral de protección, custodia y salvaguarda."
+            }
           },
           {
             "@type": "Question",
             "name": "¿Cómo solicito una cotización de seguridad privada?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp al celular 449 211 3512, llama a la oficina al 449 281 2299 o llena el formulario del sitio. Un asesor analiza tu necesidad y diseña un esquema a la medida." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Escríbenos por WhatsApp al celular 449 211 3512, llama a la oficina al 449 281 2299 o llena el formulario del sitio. Un asesor analiza tu necesidad y diseña un esquema a la medida."
+            }
           }
         ]
       }
@@ -196,7 +418,7 @@
           <circle class="pl__ticks" cx="120" cy="120" r="92" pathLength="360"/>
           <g class="pl__orbit"><circle cx="120" cy="6" r="3.5"/></g>
         </svg>
-        <img class="pl__logo" src="assets/img/logo-gpl-sm.webp" width="128" height="128" alt="">
+        <img class="pl__logo" src="assets/img/logo-gpl-sm.webp" width="128" height="128" alt="" fetchpriority="high">
         <div class="pl__scan"></div>
       </div>
       <p class="pl__count"><span id="pl-count">000</span><small>%</small></p>
