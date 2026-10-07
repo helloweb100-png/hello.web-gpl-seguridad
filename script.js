@@ -14,7 +14,7 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
-  const WA_NUMBER = '524492113512';
+  const WA_NUMBER = '524492113511';
   const store = {
     get(k) { try { return sessionStorage.getItem(k); } catch (_) { return null; } },
     set(k, v) { try { sessionStorage.setItem(k, v); } catch (_) { /* modo privado */ } },
